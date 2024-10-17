@@ -1,0 +1,7 @@
+- name: varible decalre as arguments
+  hosts: local
+  connection: local
+  tasks:
+  - name: declare variables from arguments
+    ansible.builtin.debug:
+      msg: "I am learning {{ course }}" # declare variable variable along with run command
