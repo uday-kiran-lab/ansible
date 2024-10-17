@@ -7,6 +7,6 @@
       name: nginx
       state: present
   - name: uninstall
-    ansible.bulitin.package:
+    ansible.builtin.package:
       name: nginx
       state: absent
