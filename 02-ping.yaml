@@ -4,3 +4,8 @@
   tasks:
   - name: ping the server
     ansible.builtin.ping:
+    register: output_value
+  - name: print the output
+    ansible.builtin.debug:
+      msg: "{{ output_value }}"
+
