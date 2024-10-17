@@ -6,5 +6,6 @@
     ansible.builtin.debug:
       msg: "I am learning {{ course }}" # declare variable variable along with run command
 
-# Run command --> ansible-playbook -i inventory.ini 09-vars-from-args.yaml -e "course= AWS with Devops"
+# Run command --> ansible-playbook -i inventory.ini 09-vars-from-args.yaml -e "course= 'AWS with Devops'"
+# if variable is multiple words mention in single quotes
 # ansible-playbook -i <inventory-file-name> <playbook-name> -e "<variable_declaration>"  --> general syntax
