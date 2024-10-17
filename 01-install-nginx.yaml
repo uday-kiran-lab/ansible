@@ -1,14 +1,14 @@
 - name: intsall nginx
   hosts: local
-  connection: local
-  become: yes
+  connection: local # for coonecting same server
+  become: yes # get sudo or root access
   tasks:
   - name: intsall
-    ansible.builtin.package:
+    ansible.builtin.package: # module used for install package
       name: nginx
-      state: present
+      state: present # present means installed, absent means uninstall
   - name: Start service nginx, if not started
-    ansible.builtin.service:
+    ansible.builtin.service: # module for start the service 
       name: nginx
       state: started
-      enabled: yes
+      enabled: yes # service will up automatically when server reboot

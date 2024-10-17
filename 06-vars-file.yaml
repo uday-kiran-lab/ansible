@@ -1,9 +1,9 @@
 - name: variable declare from file
   hosts: local
   connection: local
-  vars_files:
+  vars_files: # decalre variables from vars_file 
     - vars.yaml #if file present in same loaction or else declare with absloute path
   tasks:
   - name: declare from file
     ansible.builtin.debug:
-      msg: "I am learing {{ course }}" # course is a variable. it's value is declare in above mentioned file name
+      msg: "I am learning {{ course }}" # course is a variable. it's value is declare in above mentioned file name

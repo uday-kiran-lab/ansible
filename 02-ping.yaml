@@ -3,9 +3,9 @@
   connection: local
   tasks:
   - name: ping the server
-    ansible.builtin.ping:
-    register: output_value
+    ansible.builtin.ping: # module used for ping the server 
+    register: output_value #register is used for store the above command output and assign the value to output_value variable
   - name: print the output
-    ansible.builtin.debug:
-      msg: "{{ output_value }}"
+    ansible.builtin.debug: # module for print the output
+      msg: "{{ output_value }}" 
 

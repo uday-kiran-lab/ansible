@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-  - name: declare from inventory file
+  - name: declare from inventory file #if you not declare varibles it will check inventory file 
     ansible.builtin.debug:
       msg: "I am learning {{ course }}"
