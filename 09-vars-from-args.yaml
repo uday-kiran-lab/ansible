@@ -1,0 +1,10 @@
+- name: varible decalre as arguments
+  hosts: local
+  connection: local
+  tasks:
+  - name: declare variables from arguments
+    ansible.builtin.debug:
+      msg: "I am learning {{ course }}" # declare variable variable along with run command
+
+# Run command --> ansible-playbook -i inventory.ini 09-vars-from-args.yaml -e "course= AWS with Devops"
+# ansible-playbook -i <inventory-file-name> <playbook-name> -e "<variable_declaration>"  --> general syntax
