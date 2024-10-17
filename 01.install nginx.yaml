@@ -1,0 +1,12 @@
+- name: intsall nginx
+  hosts: all
+  become: yes
+  tasks:
+  - name: intsall
+    ansible.builtin.package:
+      name: nginx
+      state: present
+  - name: uninstall
+    ansible.bulitin.package:
+      name: nginx
+      state: absent
