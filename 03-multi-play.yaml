@@ -10,5 +10,5 @@
   connection: local
   tasks:
   - name: play02 task01
-    ansible.bulitin.debug:
+    ansible.builtin.debug:
       msg: "This is task01 in play02"
