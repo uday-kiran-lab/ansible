@@ -1,6 +1,6 @@
 - name: intsall nginx
   hosts: local
-  connection: local # for coonecting same server
+  connection: local # for connecting same server
   become: yes # get sudo or root access
   tasks:
   - name: intsall
