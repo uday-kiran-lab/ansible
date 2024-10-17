@@ -1,0 +1,10 @@
+- name: declare variable 
+  hosts: local
+  connection: local
+  tasks:
+  - name: variable decalre at task level
+    vars:
+      course: "AWS with DevOps"
+    ansible.builtin.debug:
+      msg: "I am learining {{ course }}"
+

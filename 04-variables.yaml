@@ -1,0 +1,10 @@
+- name: delcarion of variables
+  hosts: local
+  connection: local
+  vars:
+    course: "aws with DevOps"
+  tasks:
+  - name: variable declartion
+    ansible.builtin.debug:
+      msg: "I am learning {{ course }}"
+      
