@@ -4,7 +4,7 @@
   vars_prompt:
     - name: course
       prompt: "Enter course name"
-      Private: false # To display the entered value. defualt it hidden
+      private: false # To display the entered value. defualt it hidden
   tasks:
   - name: prompt level declaration
     ansible.builtin.debug:
