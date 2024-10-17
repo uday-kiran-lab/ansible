@@ -1,0 +1,10 @@
+- name: variable declare in prompt 
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: course
+      prompt: "Enter course name"
+  tasks:
+  - name: prompt level declaration
+    ansible.builtin.debug:
+      msg: "I am learning {{ course }}"
