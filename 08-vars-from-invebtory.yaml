@@ -1,0 +1,7 @@
+- name: varible decalre from inventory file
+  hosts: local
+  connection: local
+  tasks:
+  - name: declare from inventory file
+    ansible.builtin.debug:
+      msg: "I am learning {{ course }}"
