@@ -1,5 +1,5 @@
 - name: variable declare from file
-  hosts: loacl
+  hosts: local
   connection: local
   vars_files:
     - vars.yaml #if file present in same loaction or else declare with absloute path
