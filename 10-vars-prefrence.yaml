@@ -1,0 +1,17 @@
+- name: variable prefrences
+  hosts: local
+  connection: local
+  vars:
+    course: "Ansible from play-level"
+  vars_prompt:
+    - name: course
+      prompt: Enter course name
+      private: false
+  vars_files:
+    - vars.yaml
+  tasks:
+  - name: prefrence the variables
+    vars:
+      course: "Ansible from task-level"
+    ansible.builtin.debug:
+      msg: "I am learning {{ course }}"
