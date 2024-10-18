@@ -13,5 +13,5 @@
   - name: print with if not name matches
     ansible.builtin.debug:
       msg: "enter name is not match"
-    
+    when: Name != "Uday"
   
