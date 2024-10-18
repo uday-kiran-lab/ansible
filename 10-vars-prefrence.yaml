@@ -3,10 +3,10 @@
   connection: local
   vars:
     course: "Ansible from play-level"
-  vars_prompt:
-    - name: course
-      prompt: Enter course name
-      private: false
+  # vars_prompt:
+  #   - name: course
+  #     prompt: Enter course name
+  #     private: false
   # vars_files:
   #   - vars.yaml
   tasks:
