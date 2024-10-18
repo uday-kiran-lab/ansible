@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    name: "Uday_kiran" #string
+    Name: "Uday_kiran" #string
     age: 20 #integer
     height: 5.4 #float
     employee: true #boolean
@@ -18,4 +18,4 @@
   tasks:
   - name: delcare the values 
     ansible.builtin.debug:
-      msg: "Hi, my name is {{ name }}. my  age is {{ age }}, and height is {{ height }}. working as employee {{ employee }} in compancy offices are {{ offices }} and ready with skills are {{ skills }}"
+      msg: "Hi, my name is {{ Name }}. my  age is {{ age }}, and height is {{ height }}. working as employee {{ employee }} in compancy offices are {{ offices }} and ready with skills are {{ skills }}"
