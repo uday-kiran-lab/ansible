@@ -1,0 +1,21 @@
+- name: datatypes declaration
+  hosts: local
+  connection: local
+  vars:
+    name: "Uday_kiran" #string
+    age: 20 #integer
+    height: 5.4 #float
+    employee: true #boolean
+    offices:  #list
+      - cpc
+      - Infosys
+    # declaration list_name[index] --> offices[0]
+    skills: #map/dictionary 
+      primary: AWS with Devops # key: value
+      secondary: oracle
+    # declaration dictname.key  --> skills.primary
+
+  tasks:
+  - name: delcare the values 
+    ansible.builtin.debug:
+      msg: "Hi, my name is {{ name }}. my  age is {{ age }}, and height is {{ height }}. working as employee {{ employee }} in compancy offices are {{ offices }} and ready with skills are {{ skills }}"
