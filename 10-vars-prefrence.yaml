@@ -7,8 +7,8 @@
     - name: course
       prompt: Enter course name
       private: false
-  vars_files:
-    - vars.yaml
+  # vars_files:
+  #   - vars.yaml
   tasks:
   - name: prefrence the variables
     # vars:
