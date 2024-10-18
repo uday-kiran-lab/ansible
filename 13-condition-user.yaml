@@ -1,0 +1,12 @@
+- name: user creation
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: chek if user exists
+    ansible.builtin.command: id expense
+    register: user_info
+  - name: user information
+    ansible.builtin.debug:
+      msg: "user info : {{ user_info }}"
+  
