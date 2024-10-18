@@ -3,6 +3,7 @@
   connection: local
   vars:
     Name: "Uday_kiran" #string
+    # "name" is keyword. don't use as variable name
     age: 20 #integer
     height: 5.4 #float
     employee: true #boolean

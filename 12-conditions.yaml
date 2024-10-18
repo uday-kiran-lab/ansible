@@ -1,0 +1,17 @@
+- name: string comparision
+  hosts: local
+  connection: local
+  vars_prompt:
+    - name: Name
+      prompt: enter the name
+      private: false
+  tasks:
+  - name: print with if name matches
+    ansible.builtin.debug:
+      msg: "enter name is {{ Name }}"
+    when:  Name == "Uday"
+  - name: print with if not name matches
+    ansible.builtin.debug:
+      msg: "enter name is not match"
+    
+  
