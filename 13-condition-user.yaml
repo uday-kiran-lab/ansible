@@ -4,7 +4,8 @@
   become: yes
   tasks:
   - name: chek if user exists
-    ansible.builtin.command: id expense
+    ansible.builtin.command: id expense #module for run the commands
+    ignore_errors: true #avoide errors
     register: user_info
     
   - name: user information
@@ -13,5 +14,6 @@
   - name: create user
     ansible.builtin.command: useradd expense
     when: user_info.rc != 0
+# if any error is occures it will exit from play-book without excetution of remaining tasks.
 
   
