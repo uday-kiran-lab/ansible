@@ -1,8 +1,8 @@
 - name: variable prefrences
   hosts: local
   connection: local
-  vars:
-    course: "Ansible from play-level"
+  # vars:
+  #   course: "Ansible from play-level"
   # vars_prompt:
   #   - name: course
   #     prompt: Enter course name
