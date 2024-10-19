@@ -1,6 +1,7 @@
 - name: install multiple packages
   hosts: local
   connection: local
+  become: yes
   vars:
     list_of_packages:
       - nginix 
