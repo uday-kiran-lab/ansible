@@ -1,0 +1,11 @@
+- name: loops demo
+  hosts: local
+  connection: local
+  tasks: 
+  - name: print the list of names
+    ansible.builtin.debug:
+      msg: "the list of names are: {{ item[0] }}" # item is reserve word for call the loop
+    loop: # keyword for loop declaration
+      - ganesh
+      - uday 
+      - sai

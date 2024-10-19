@@ -1,0 +1,20 @@
+- name: install multiple packages
+  hosts: local
+  connection: local
+  vars:
+    list_of_packages:
+      - nginix 
+      - mysql
+      - httpd
+
+  tasks:
+  - name: install packages 
+    ansible.builtin.package:
+      name: "{{ item }}"
+      # name: "{{ list_of_packages }}"
+      state: present
+    loop:
+    - nginx
+    - mysql
+    - httpd
+    # loop: "{{ list_of_packages }}"
