@@ -4,7 +4,7 @@
   become: yes
   vars:
     list_of_packages:
-      - nginix 
+      - nginx 
       - mysql
       - httpd
 
