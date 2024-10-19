@@ -11,11 +11,11 @@
   tasks:
   - name: install packages 
     ansible.builtin.package:
-      name: "{{ item }}"
-      # name: "{{ list_of_packages }}"
+      #name: "{{ item }}"
+      name: "{{ list_of_packages }}"
       state: present
-    loop:
-    - nginx
-    - mysql
-    - httpd
-    # loop: "{{ list_of_packages }}"
+    # loop:
+    # - nginx
+    # - mysql
+    # - httpd
+    loop: "{{ list_of_packages }}"
