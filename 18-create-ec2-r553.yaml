@@ -2,6 +2,7 @@
   hosts: local
   connection: local
   vars:
+    zone: devopskiran.online
 
     instanaces:
     - mysql
@@ -33,6 +34,19 @@
   - name: print the ec2 information
     ansible.builtin.debug:
       msg: "{{ ec2_info }}"
-  #- name : create route53
+  - name: print the ec2 information
+    ansible.builtin.debug:
+      msg: "{{ ec2_info.results }}"
+  
+  # - name : create route53
+  #   amazon.aws.route53:
+  #     state: present
+  #     zone: "{{ zone }}"
+  #     record: "mysql.{{ zone }}"
+  #     type: A
+  #     ttl: 1
+  #     value: 
+  #     wait: true
+  #   loop: {{ ec2_info.}}
 
   
