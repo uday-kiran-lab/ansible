@@ -31,9 +31,9 @@
       vpc_subnet_id: subnet-08ecc8029a7be6e48 # need to take sub_net id 
     loop: "{{ instanaces }}"
     register: ec2_info
-  - name: print the ec2 information
-    ansible.builtin.debug:
-      msg: "{{ ec2_info }}"
+  # - name: print the ec2 information
+  #   ansible.builtin.debug:
+  #     msg: "{{ ec2_info }}"
   - name: print the ec2 information
     ansible.builtin.debug:
       msg: "{{ ec2_info.results.instances }}"
