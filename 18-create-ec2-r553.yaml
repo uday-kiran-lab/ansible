@@ -36,7 +36,7 @@
       msg: "{{ ec2_info }}"
   - name: print the ec2 information
     ansible.builtin.debug:
-      msg: "{{ ec2_info.results }}"
+      msg: "{{ ec2_info.results.instances }}"
   
   # - name : create route53
   #   amazon.aws.route53:
@@ -45,7 +45,7 @@
   #     record: "mysql.{{ zone }}"
   #     type: A
   #     ttl: 1
-  #     value: 
+  #     value: instances
   #     wait: true
   #   loop: {{ ec2_info.}}
 
