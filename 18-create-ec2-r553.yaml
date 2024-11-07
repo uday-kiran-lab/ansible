@@ -36,7 +36,8 @@
   #     msg: "{{ ec2_info }}"
   - name: print the ec2 information
     ansible.builtin.debug:
-      msg: "{{ ec2_info.results.instances[0] }}"
+      msg: "{{ ec2_info.results }}"
+    
   
   # - name : create route53
   #   amazon.aws.route53:
