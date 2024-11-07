@@ -20,5 +20,5 @@
       image_id: ami-09c813fb71547fc4f
       region: us-east-1
       security_group: sg-0e636a545591b4349
-      vpc_subnet_id: vpc-037525ac174643f78 
+      vpc_subnet_id: subnet-08ecc8029a7be6e48 # need to take sub_net id  
   
