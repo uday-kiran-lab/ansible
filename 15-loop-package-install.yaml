@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   become: yes
-  vars:
+  vars: #method1 declare list of variables 
     list_of_packages:
       - nginx 
       - mysql
