@@ -3,10 +3,10 @@
   connection: local
   vars:
 
-  instanaces:
-  - mysql
-  - backend
-  - frontend
+    instanaces:
+    - mysql
+    - backend
+    - frontend
 
   tasks: 
   - name: install boto3 and botocore
