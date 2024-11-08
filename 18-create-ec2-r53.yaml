@@ -39,7 +39,7 @@
       msg: "{{ ec2_info.results.instances[0].private_ip_addresses }}"
     
   
-  # - name : create route53
+  # - name : create route53 
   #   amazon.aws.route53:
   #     state: present
   #     zone: "{{ zone }}"
