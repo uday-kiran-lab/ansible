@@ -37,7 +37,7 @@
   
     
 # create route 53
-  - name : create route53 with private ip address
+  - name: create route53 with private ip address
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
@@ -49,7 +49,7 @@
       overwrite: true
     loop: "{{ ec2_info.results }}"
 # craete route 53 public ip
-  - name : create route53 with public ip address
+  - name: create route53 with public ip address
     amazon.aws.route53:
       state: present
       zone: "{{ zone }}"
