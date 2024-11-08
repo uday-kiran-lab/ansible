@@ -36,7 +36,7 @@
   #     msg: "{{ ec2_info }}"
   - name: print the ec2 information
     ansible.builtin.debug:
-      msg: "{{ ec2_info.results.instances[0].private_ip_addresses }}"
+      msg: "{{ ec2_info.results.instances.private_ip_addresses }}"
     
   
   # - name : create route53 
