@@ -60,7 +60,7 @@
       wait: true
       overwrite: true
     loop: "{{ ec2_info.results }}"
-    where:  item.item=="frontend"
+    where:  item.item == "frontend"
   
 
   
